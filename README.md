@@ -16,14 +16,6 @@ The accompanying paper frames the project around the Marshall Fire in Colorado a
 
 This repo is structured for a public or semi-public release **without restricted data**. The paper states that the mobility data were obtained through Cuebiq/Spectus under restricted access and are therefore not publicly available. Only non-sensitive derived outputs, code, documentation, and optionally small metadata tables or schemas should be committed.
 
-Recommended public-release policy:
-
-- Include notebooks and reusable code
-- Include figure-generation code
-- Include small derived tables only if they are safe to share
-- Do **not** include raw device-level data
-- Do **not** include private intermediate files that can reveal restricted information
-- Do **not** include local machine paths, tokens, or credentials
 
 ## Repository structure
 
