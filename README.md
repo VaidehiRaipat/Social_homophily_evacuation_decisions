@@ -23,7 +23,7 @@ This repo is structured for a public or semi-public release **without restricted
 social-homophily-marshall-fire/
 ├── Processing notebooks/
 │   ├── 00_Determining_Evacuees.ipynb
-├── notebooks/
+├── Results notebooks/
 │   ├── 01_evacuation_distance_analysis.ipynb
 │   ├── 02_social_homophily_computation.ipynb
 │   ├── 03_evacuation_regression_analysis.ipynb
@@ -44,7 +44,12 @@ social-homophily-marshall-fire/
 
 ## Notebook workflow
 
-The uploaded notebooks already form a clear analysis pipeline:
+### Processing notebooks
+
+0. **00_Determining_Evacuees.ipynb**
+   Identifies home location (Nighttime location(all thresholds including ones in sullimentary) of all available users in the datasst and uses this information to dermine non-evacuees and evacuees 
+   
+### Results notebooks
 
 1. **01_evacuation_distance_analysis.ipynb**  
    Computes evacuation distances and prepares an evacuee-level file for downstream homophily analysis.
