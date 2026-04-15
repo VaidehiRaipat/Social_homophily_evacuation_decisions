@@ -8,7 +8,7 @@ The project is based on longitudinal anonymized mobility data and social connect
 2. Do evacuees choose destinations that are more socially similar or socially connected than expected under a distance-based null model?
 3. Is the social homophily of evacuation destinations associated with long-term return and displacement outcomes?
 
-The accompanying paper frames the project around the Marshall Fire in Colorado and shows that pre-disaster mobility behavior, social similarity, and social connectedness are important for explaining evacuation destination choice and longer-term recovery trajectories. The paper also notes that the underlying Cuebiq mobility data are not publicly shareable, while code from aggregated data can be made public.
+The accompanying paper (https://arxiv.org/abs/2507.18270) frames the project around the Marshall Fire in Colorado and shows that pre-disaster mobility behavior, social similarity, and social connectedness are important for explaining evacuation destination choice and longer-term recovery trajectories. The paper also notes that the underlying Cuebiq mobility data are not publicly shareable, while code from aggregated data can be made public.
 
 ## Data access and confidentiality
 
