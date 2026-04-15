@@ -21,11 +21,6 @@ This repo is structured for a public or semi-public release **without restricted
 
 ```text
 social-homophily-marshall-fire/
-├── README.md
-├── .gitignore
-├── requirements.txt
-├── environment.yml
-├── LICENSE.md
 ├── notebooks/
 │   ├── 01_evacuation_distance_analysis.ipynb
 │   ├── 02_social_homophily_computation.ipynb
@@ -36,21 +31,13 @@ social-homophily-marshall-fire/
 │   ├── 05c_null_model_simulation_trial.ipynb
 │   ├── 05d_null_model_simulation_supplementary.ipynb
 │   └── 06_simulation_regression_analysis.ipynb
-├── src/
-│   └── social_homophily/
-│       ├── __init__.py
-│       ├── paths.py
-│       └── utils.py
 ├── data/
 │   ├── processed/
 │   └── README.md
 ├── outputs/
-│   ├── figures/
-│   └── tables/
-├── docs/
-│   └── NOTEBOOK_GUIDE.md
-└── config/
-    └── paths.example.env
+    ├── figures/
+    └── tables/
+
 ```
 
 ## Notebook workflow
