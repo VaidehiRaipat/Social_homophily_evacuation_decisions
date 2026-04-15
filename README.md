@@ -71,7 +71,7 @@ social-homophily-marshall-fire/
 
 ## Known input/output chain from the notebooks
 
-This is the approximate dependency chain of datasetd created from the commited notebooks:
+This is the dependency chain of datasetd created from the commited notebooks:
 
 - `evacuees.csv` -> `evacuess_for_homophily_final.csv`
 - `evacuess_for_homophily_final.csv` -> `evacuees_for_regression_final.csv`
