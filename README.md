@@ -34,9 +34,7 @@ social-homophily-marshall-fire/
 │   ├── 05c_null_model_simulation_trial.ipynb
 │   ├── 05d_null_model_simulation_supplementary.ipynb
 │   └── 06_simulation_regression_analysis.ipynb
-│        ├── outputs/
-│            ├── figures/
-│            └── tables/
+│        
 │
 ├── data/
     ├── Census
@@ -74,11 +72,45 @@ social-homophily-marshall-fire/
 
 This is the dependency chain of datasetd created from the commited notebooks:
 
-- `evacuees.csv` -> `evacuess_for_homophily_final.csv`
-- `evacuess_for_homophily_final.csv` -> `evacuees_for_regression_final.csv`
-- `evacuees_for_regression_final.csv` + `colorado_SCI_ZIP_CBG.csv` -> `evacuees_newSCI_simulation.csv`
-- `evacuees_for_regression_final.csv` + `displaced_for_regression_final.csv` -> displacement/return analysis outputs
-- `evacuees_newSCI_simulation.csv` + pairwise origin-destination tables -> simulated destinations and actual-vs-simulated comparison tables
+- Raw / processed stop-level mobility data
+  → nighttime stop extraction using the paper definition of nighttime (8 PM to 7 AM)
+  → weekly nighttime CBG assignment for each user
+
+- Weekly nighttime CBG assignment
+  → threshold-specific weekly files:
+    - `merged_weekly_no_id_240.csv.gz`
+    - `merged_weekly_no_id.csv.gz`          # main 480-minute threshold
+    - `merged_weekly_no_id_720.csv.gz`
+    - `merged_weekly_no_id_960.csv.gz`
+    - `merged_weekly_no_id_1200.csv.gz`
+    - `merged_weekly_no_id_1440.csv.gz`
+    - `merged_weekly_no_id_1680.csv.gz`
+    - `merged_weekly_no_id_1920.csv.gz`
+
+- Threshold-specific weekly nighttime files
+  → stable pre-disaster home CBG identification
+  → evacuee / non-evacuee classification
+  → evacuation motif classification
+  → robustness checks across thresholds
+
+- Main-threshold evacuee outputs
+  → `evacuees.csv`
+
+- `evacuees.csv`
+  → `evacuees_for_homophily_final.csv`
+
+- `evacuees_for_homophily_final.csv`
+  → `evacuees_for_regression_final.csv`
+
+- `evacuees_for_regression_final.csv` + `colorado_SCI_ZIP_CBG.csv`
+  → `evacuees_newSCI_simulation.csv`
+
+- `evacuees_for_regression_final.csv` + `displaced_for_regression_final.csv`
+  → displacement / return analysis outputs
+
+- `evacuees_newSCI_simulation.csv` + pairwise origin-destination tables
+  → simulated destination outputs
+  → actual-vs-simulated comparison tables
 
 Because the data are restricted, the public version of the repo should treat these files as **expected inputs** rather than committed data assets unless they are safe, aggregated, and explicitly shareable.
 
