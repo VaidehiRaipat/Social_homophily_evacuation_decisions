@@ -47,7 +47,7 @@ social-homophily-marshall-fire/
 ### Processing notebooks
 
 0. **00_Determining_Evacuees.ipynb**
-   Identifies home location (Nighttime location(all thresholds including ones in sullimentary) of all available users in the datasst and uses this information to dermine non-evacuees and evacuees 
+   Estimates user home locations from pre-disaster nighttime stay patterns at the census block group level, using all threshold definitions considered in the main and supplementary analyses. Based on these inferred home locations, it identifies evacuees and non-evacuees during the disaster period, constructs evacuation motifs from post-disaster nighttime location trajectories, and performs robustness checks to assess the sensitivity of these classifications to alternative threshold choices.
    
 ### Results notebooks
 
