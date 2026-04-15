@@ -31,13 +31,13 @@ social-homophily-marshall-fire/
 │   ├── 05c_null_model_simulation_trial.ipynb
 │   ├── 05d_null_model_simulation_supplementary.ipynb
 │   └── 06_simulation_regression_analysis.ipynb
+│        ├── outputs/
+│            ├── figures/
+│            └── tables/
+│
 ├── data/
-│   ├── processed/
-│   └── README.md
-├── outputs/
-    ├── figures/
-    └── tables/
-
+    ├── Census
+    └── Social Connectedness Index
 ```
 
 ## Notebook workflow
