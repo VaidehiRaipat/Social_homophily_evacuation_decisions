@@ -77,7 +77,7 @@ The uploaded notebooks already form a clear analysis pipeline:
 
 ## Known input/output chain from the notebooks
 
-This is the approximate dependency chain inferred from the notebooks:
+This is the approximate dependency chain of datasetd created from the commited notebooks:
 
 - `evacuees.csv` -> `evacuess_for_homophily_final.csv`
 - `evacuess_for_homophily_final.csv` -> `evacuees_for_regression_final.csv`
@@ -87,35 +87,23 @@ This is the approximate dependency chain inferred from the notebooks:
 
 Because the data are restricted, the public version of the repo should treat these files as **expected inputs** rather than committed data assets unless they are safe, aggregated, and explicitly shareable.
 
-## Suggested cleanup before pushing to GitHub
-
-1. Clear notebook outputs.
-2. Replace absolute local paths with relative paths or environment variables.
-3. Move repeated helper code into `src/social_homophily/`.
-4. Add a short markdown intro cell at the top of each notebook:
-   - purpose
-   - required inputs
-   - generated outputs
-   - expected runtime
-5. Rename inconsistent files where possible. Example: `evacuess_for_regs.csv` should become something like `evacuees_for_simulation.csv`.
-6. Keep only the final simulation notebook in the main workflow and mark trial notebooks as exploratory.
-
 ## Reproducibility notes
 
-The paper states that the analysis was conducted in Python and that the code for reproducing the main results from aggregated data is intended to be public. In practice, complete reproduction will depend on restricted mobility data access and on derived intermediate datasets that may need to be regenerated internally.
+This analysis was conducted in Python and that the code for reproducing the main results from aggregated data is intended to be public. In practice, complete reproduction will depend on restricted mobility data access and on derived intermediate datasets that may need to be regenerated internally.
 
-For a public-facing repository, the cleanest approach is:
+## Requirements
 
-- document the full pipeline honestly
-- provide notebook logic and reusable code
-- provide data dictionaries and expected schemas
-- include only safe derived outputs
-- explain which parts cannot be rerun without restricted access
+pandas
+numpy
+geopandas
+shapely
+geopy
+scipy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+jupyter
+notebook
+stargazer
 
-## Citation
-
-If you use this repository, cite the associated paper and include the project title, authors, and repository URL once finalized.
-
-## Status
-
-This repository template was reconstructed from the uploaded notebooks and accompanying manuscript. It is a strong starting point, but it still needs one final pass of file renaming, path cleanup, and notebook annotation before public release.
