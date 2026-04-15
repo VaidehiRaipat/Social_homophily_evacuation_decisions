@@ -21,6 +21,8 @@ This repo is structured for a public or semi-public release **without restricted
 
 ```text
 social-homophily-marshall-fire/
+├── Processing notebooks/
+│   ├── 00_Determining_Evacuees.ipynb
 ├── notebooks/
 │   ├── 01_evacuation_distance_analysis.ipynb
 │   ├── 02_social_homophily_computation.ipynb
